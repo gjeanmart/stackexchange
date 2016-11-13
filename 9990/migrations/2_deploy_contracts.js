@@ -1,3 +1,3 @@
 module.exports = function(deployer) {
-  deployer.deploy(MainContract, 10);
+  deployer.deploy(MainContract, 20);
 };
