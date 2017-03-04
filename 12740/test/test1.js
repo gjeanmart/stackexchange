@@ -25,5 +25,4 @@ contract('A', function() {
             console.log(result);
         });
     });
-    
 });

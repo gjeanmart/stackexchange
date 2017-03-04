@@ -6,8 +6,7 @@ contract A {
 
    address[] public addElements;
 
-   
-    event newAddress(address a);
+   event newAddress(address a);
    
    function A() payable {
 
@@ -16,6 +15,8 @@ contract A {
    function create() returns (address a) {
        B obj = new B();
        addElements.push(obj);
+       
+       // Trigger event
        newAddress(obj);
    }
 
