@@ -1,0 +1,21 @@
+{
+  "contract_name": "B",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052346000575b5b5b60358060186000396000f30060606040525b60005600a165627a7a723058202a35de6d024059b8b4e96ef31407ce002aa973263c951eeb9f9aef0a216e64da0029",
+  "networks": {
+    "1488579238318": {
+      "events": {},
+      "links": {},
+      "address": "0x5cec7be3d232d59a7e7eb89a5f0cfaebd15125b4",
+      "updated_at": 1488638590294
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1488638590294
+}
