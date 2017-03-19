@@ -20,7 +20,7 @@ contract Offer {
     function addOffer(string  description1, string title1, uint price1,uint offerTime1) 
       returns (uint, string, string, uint, uint) {
         uint offerID = offers.length++;
-        Offer o = offers[offerID];
+        Offer memory o = offers[offerID];
 
         o.description = description1;
         o.offerTime=offerTime1;
