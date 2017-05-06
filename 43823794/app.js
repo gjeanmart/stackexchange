@@ -1,11 +1,6 @@
 'use strict';
 (function(){
-    
-    /******************************************
-     **** Entry point for the AngularJS application
-     **** 
-     **** Define the application's name  and a list of mdoules (libraries)
-     ******************************************/
+
     angular.module('test', 
         [   'ui.bootstrap',
             'ui.router'
@@ -29,16 +24,17 @@
                 params              : {tocopy: null},
                 onEnter: ['$state', '$stateParams', '$uibModal', function ($state, $stateParams, $uibModal) {
                     $uibModal.open({
-                        templateUrl: './popup.html',
-                        controller: 'popupController',
-                        resolve: {
+                        templateUrl : './popup.html',
+                        controller  : 'popupController',
+                        windowClass : 'center-modal',
+                        resolve     : {
                             tocopy: function() {
                                 return $stateParams.tocopy;
                             }
                         }
-                      }).result.finally(function() {
-                            $state.go('^');
-                      });
+                    }).result.finally(function() {
+                        $state.go('^');
+                    });
                 }]
             }) 
     }]);
