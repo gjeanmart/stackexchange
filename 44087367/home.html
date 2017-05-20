@@ -1,0 +1,9 @@
+
+<table ng-table="table" class="table table-condensed table-bordered table-striped">
+    <tr ng-repeat="row in $data">
+        <td data-title="'Index'" filter="{index: 'number'}">{{row.index}}</td>
+        <td data-title="'Name'" filter="{name: 'text'}">{{row.name}}</td>
+        <td data-title="'Age'" filter="{age: 'number'}">{{row.age}}</td>
+        <td data-title="'Money'" filter="{money: 'number'}">{{row.money}}</td>
+    </tr>
+</table>
