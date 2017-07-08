@@ -1,0 +1,29 @@
+{
+  "contract_name": "SilverCoin",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "abc",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x60606040523415600b57fe5b5b60718061001a6000396000f300606060405263ffffffff60e060020a6000350416639227793381146020575bfe5b3415602757fe5b602d603f565b60408051918252519081900360200190f35b60005b905600a165627a7a72305820633619aa872caca4eefe6ae573eef20fb0ede71512665ef9ebe769b6283ddfda0029",
+  "networks": {
+    "1499533385178": {
+      "events": {},
+      "links": {},
+      "address": "0xdfdd31f1f7d1478d311573104189845c70a0ed34",
+      "updated_at": 1499533892890
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1499533892890
+}
