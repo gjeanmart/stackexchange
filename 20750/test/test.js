@@ -11,7 +11,7 @@ contract('Banker', function(accounts) {
             
             }).then(function (result) {
                 console.log(result.toNumber());
-
+                assert.equal(result.toNumber(), 0, " must be 0");
             });
     });
 });
