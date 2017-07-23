@@ -1,9 +1,7 @@
 var Voting = artifacts.require("./Voting.sol");
 
 contract('Voting', function(accounts) {
-    
-    
-    
+     
     it("test1", function() {
         var votingInstance;
         
@@ -12,12 +10,10 @@ contract('Voting', function(accounts) {
             return votingInstance.voteForCandidate("greg", {from: accounts[0], value: web3.toWei(5, "ether")});
         
         }).then(function(tx) {
+            console.log("Print events");
             console.log(tx);
-            console.log(tx.logs[0]);
         });
     });
-    
-    
-    
+
 
 });
