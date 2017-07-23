@@ -1,0 +1,146 @@
+{
+  "contract_name": "Voting",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "candidate",
+          "type": "bytes32"
+        }
+      ],
+      "name": "totalVotesFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "candidate",
+          "type": "bytes32"
+        }
+      ],
+      "name": "validCandidate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "votesReceived",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "candidateList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "candidate",
+          "type": "bytes32"
+        }
+      ],
+      "name": "voteForCandidate",
+      "outputs": [],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "candidateNames",
+          "type": "bytes32[]"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_msg",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "Updatestatus",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b60405161033e38038061033e833981016040528051015b805161003690600290602084019061003e565b505b506100ad565b82805482825590600052602060002090810192821561007b579160200282015b8281111561007b578251825560209092019160019091019061005e565b5b5061008892915061008c565b5090565b6100aa91905b808211156100885760008155600101610092565b5090565b90565b610282806100bc6000396000f300606060405263ffffffff60e060020a6000350416632f265cf7811461004d578063392e6678146100765780637021939f1461009d578063b13c744b146100c6578063cc9ab267146100eb575bfe5b341561005557fe5b6100606004356100f8565b6040805160ff9092168252519081900360200190f35b341561007e57fe5b610089600435610128565b604080519115158252519081900360200190f35b34156100a557fe5b61006060043561017a565b6040805160ff9092168252519081900360200190f35b34156100ce57fe5b6100d960043561018f565b60408051918252519081900360200190f35b6100f66004356101b2565b005b600061010382610128565b151561010f5760006000fd5b5060008181526020819052604090205460ff165b919050565b6000805b60025481101561016f57600280548491908390811061014757fe5b906000526020600020900160005b505414156101665760019150610174565b5b60010161012c565b600091505b50919050565b60006020819052908152604090205460ff1681565b600280548290811061019d57fe5b906000526020600020900160005b5054905081565b6101bb81610128565b15156101c75760006000fd5b60408051600160a060020a0333166020820152818152601481830152606060020a73466972737420766f74652063617374656420627902606082015290517f9fa48e09f90c8f0f03c84643dcfe6022a40b0803847a99cae8609ea3ff3752789181900360800190a16000818152602081905260409020805460ff8082166001011660ff199091161790555b5b505600a165627a7a72305820710ff99183b22de4eadc3d504d590511ec2178ad86a09ee71449fd7826ece4230029",
+  "networks": {
+    "1500803859137": {
+      "events": {
+        "0x9fa48e09f90c8f0f03c84643dcfe6022a40b0803847a99cae8609ea3ff375278": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_msg",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "sender",
+              "type": "address"
+            }
+          ],
+          "name": "Updatestatus",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x29cb008649648d15905c578cd67210d489031baf",
+      "updated_at": 1500804494200
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1500804494200
+}
