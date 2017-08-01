@@ -1,0 +1,11 @@
+
+.gitignore
+!/.gitignore
+.settings
+.settings/
+.metadata
+.project
+.classpath
+.target
+build/*
+node_modules

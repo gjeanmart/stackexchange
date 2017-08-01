@@ -1,0 +1,14 @@
+{
+  "name": "23279-what-is-steps-to-deploy-the-contract-on-ropsten-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gregoire Jeanmart",
+  "license": "ISC"
+}
