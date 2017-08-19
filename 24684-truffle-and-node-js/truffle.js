@@ -1,6 +1,4 @@
 module.exports = {
-    
-    build: {},
   networks: {
     development: {
       host: "localhost",
