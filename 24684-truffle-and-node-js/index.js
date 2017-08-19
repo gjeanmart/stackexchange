@@ -23,3 +23,4 @@ MetaCoinContract.deployed().then(function(instance) {
 }, function(error) {
     console.log(error);
 }); 
+    
