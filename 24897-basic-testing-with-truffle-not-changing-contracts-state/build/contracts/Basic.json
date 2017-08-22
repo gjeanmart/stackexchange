@@ -1,0 +1,47 @@
+{
+  "contract_name": "Basic",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_value",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setValue",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b7f6d63616e7361646f0000000000000000000000000000000000000000000000006000555b5b60a0806100446000396000f300606060405263ffffffff60e060020a600035041663209652558114602d57806358825b1014604f575b600080fd5b3415603757600080fd5b603d6064565b60405190815260200160405180910390f35b3415605957600080fd5b6062600435606b565b005b6000545b90565b60008190555b505600a165627a7a723058206749e9ce33c5df637c7008d0eef09a4d2ec710ec2e48bf9a1373c7d5ebe653810029",
+  "networks": {
+    "1503398754409": {
+      "events": {},
+      "links": {},
+      "address": "0x1c3655d903433dd497cb403059896891e7fe5a22",
+      "updated_at": 1503399953693
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1503399953693
+}
