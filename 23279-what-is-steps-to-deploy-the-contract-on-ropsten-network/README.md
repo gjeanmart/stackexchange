@@ -12,7 +12,7 @@ truffle migrate --network ropsten
 ```
 
 
-## Librries used
+## Libraries used
 
 - ethereumjs-wallet
 - bip39 
