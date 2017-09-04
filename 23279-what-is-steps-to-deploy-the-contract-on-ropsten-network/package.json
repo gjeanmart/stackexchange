@@ -1,14 +1,22 @@
 {
   "name": "23279-what-is-steps-to-deploy-the-contract-on-ropsten-network",
   "version": "1.0.0",
-  "description": "",
+  "description": "Edit truffle.js - Replace CHANGE ME",
   "main": "truffle.js",
   "directories": {
     "test": "test"
   },
+  "dependencies": {
+    "bip39": "^2.4.0",
+    "ethereumjs-wallet": "^0.6.0",
+    "web3": "^0.18.4",
+    "web3-provider-engine": "^8.6.1",
+    "zeppelin-solidity": "^1.2.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gregoire Jeanmart",
+  "author": "",
   "license": "ISC"
 }
