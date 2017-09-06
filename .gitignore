@@ -1,0 +1,16 @@
+
+.gitignore
+!/.gitignore
+.settings
+.settings/
+.metadata
+.project
+.classpath
+.target
+build
+node_modules
+config/dev.json
+config/test.json
+config/staging.json
+config/production.json
+*.db
