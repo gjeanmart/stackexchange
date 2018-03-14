@@ -1,0 +1,15 @@
+{
+  "name": "42729-new-ethereum-account-with-infura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keythereum": "^1.0.2",
+    "web3": "^0.20.6"
+  }
+}
