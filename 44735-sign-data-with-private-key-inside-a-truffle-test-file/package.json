@@ -1,0 +1,14 @@
+{
+  "name": "44735-sign-data-with-private-key-inside-a-truffle-test-file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-util": "^5.1.5"
+  }
+}
