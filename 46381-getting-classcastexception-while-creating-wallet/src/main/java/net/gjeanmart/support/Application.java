@@ -41,7 +41,7 @@ public class Application {
         System.out.println(clientVersion);
         String fileName = WalletUtils.generateFullNewWalletFile(
                 "trrtytry",
-                new File("/home/gjeanmart//workspace/personal/stackexchange/46381-getting-classcastexception-while-creating-wallet/src/main/resourcdfdfes"));
+                new File("/home/gjeanmart//workspace/personal/stackexchange/46381-getting-classcastexception-while-creating-wallet/src/main/resources"));
         System.out.println(fileName);
     }
 }
