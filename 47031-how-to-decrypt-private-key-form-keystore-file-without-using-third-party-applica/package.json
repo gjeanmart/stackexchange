@@ -1,0 +1,14 @@
+{
+  "name": "47031-how-to-decrypt-private-key-form-keystore-file-without-using-third-party-applica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-wallet": "^0.6.0"
+  }
+}
