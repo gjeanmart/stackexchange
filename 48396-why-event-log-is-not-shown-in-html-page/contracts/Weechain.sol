@@ -1,7 +1,7 @@
 pragma solidity ^0.4.15;
 
-import 'SafeMath.sol';
-import 'Ownable.sol';
+import './SafeMath.sol';
+import './Ownable.sol';
 
 contract Weechain is Ownable{
 
