@@ -231,6 +231,8 @@ text-align: center;
       $("#buttonSet").click(function() {
           Coursetro.setEnergy($("#Address").val(), $("#Energy").val()).then(function(result) {
             console.log(result)
+            console.log("Logs trigerred for this transaction:")
+            console.log(result.logs)
           }).catch(function(error) {
             console.log(error)
           });
@@ -241,6 +243,8 @@ text-align: center;
       $("#buttonSetPower").click(function() {
           Coursetro.setPower($("#Address").val(), $("#Power").val()).then(function(result) {
             console.log(result)
+            console.log("Logs trigerred for this transaction:")
+            console.log(result.logs)
           }).catch(function(error) {
             console.log(error)
           });
@@ -249,6 +253,8 @@ text-align: center;
       $("#buttonGetPower").click(function() {
           Coursetro.amountOfpower($("#Address").val()).then(function(result) {
             console.log(result)
+            console.log("Logs trigerred for this transaction:")
+            console.log(result.logs)
           }).catch(function(error) {
             console.log(error)
           });
@@ -258,6 +264,8 @@ text-align: center;
       $("#buttonSetPayload").click(function() {
         Coursetro.setPayload($("#SQN").val(), $("#Payload").val()).then(function(result) {
             console.log(result)
+            console.log("Logs trigerred for this transaction:")
+            console.log(result.logs)
         }).catch(function(error) {
             console.log(error)
         });
