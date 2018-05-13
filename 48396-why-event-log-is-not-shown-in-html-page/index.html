@@ -1,0 +1,269 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weechain Smart Contract</title>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./node_modules/truffle-contract/dist/truffle-contract.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Courier New", Courier, monospace
+}
+</style>
+
+<style>
+.input {
+    background-color: #373E43;
+    color: black;
+}
+</style>
+
+<style>
+.header {
+    text-align: center;
+    background-color: #373E43;
+    color: white;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+</style>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd){background-color: #373E43; color: white;}
+tr:nth-child(even){background-color: #373E43; color: white;}
+</style>
+
+<style>
+.output {
+background-color: #373E43; 
+color: white;
+text-align: center;
+}
+</style>
+
+</head>
+<body>
+    <div class="w3-container">
+
+    <div class="header">
+  <h1>Weechain</h1>
+</div>
+
+        <!-- <p>Output: <span id="owner"></span> 
+        </p> -->
+        <div class="output">
+        <p id="Output" >  </p>
+        </div>
+
+<div class="row">
+<div class="input">
+  <div class="column">
+
+        <label for="name" class="col-lg-2 control-label">Device Address</label>
+        <input id="Address" class="w3-input w3-border w3-animate-input" type="text" style="width:30%"> 
+
+        <label for="name" class="col-lg-2 control-label">Energy</label>
+        <input id="Energy" class="w3-input w3-border w3-animate-input" type="text" style="width:30%"> 
+
+        <button id="buttonSet" class="w3-button w3-black w3-round-large">Set Energy Value</button>
+
+        <button id="buttonGet" class="w3-button w3-black w3-round-large">Get Energy Balance</button>
+
+   </div>
+   <div class="column">
+
+        <label for="name" class="col-lg-2 control-label">Device Address</label>
+        <input id="AddressPower" class="w3-input w3-border w3-animate-input" type="text" style="width:30%"> 
+
+        <label for="name" class="col-lg-2 control-label">Power</label>
+        <input id="Power" class="w3-input w3-border w3-animate-input" type="text" style="width:30%"> 
+
+        <button id="buttonSetPower" class="w3-button w3-black w3-round-large">Set Power Value</button>
+
+        <button id="buttonGetPower" class="w3-button w3-black w3-round-large">Get Power Balance</button>
+
+   </div>
+   <div class="column">
+
+        <label for="name" class="col-lg-2 control-label">Sequence Number</label>
+        <input id="SQN" class="w3-input w3-border w3-animate-input" type="text" style="width:30%"> 
+
+        <label for="name" class="col-lg-2 control-label">Payload</label>
+        <input id="Payload" class="w3-input w3-border w3-animate-input" type="text" style="width:30%"> 
+
+        <button id="buttonSetPayload" class="w3-button w3-black w3-round-large">Set Payload Value</button>
+
+   </div>
+  </div>
+</div>
+
+    <div class="row">
+        <div>
+          <h2 class="sub-header">Energy Transactions</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Transaction Hash</th>
+                  <th>Device Address</th>
+                  <th>Energy Value</th>
+                </tr>
+              </thead>
+              <tbody id="transactions">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <h2 class="sub-header">Power Transactions</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Transaction Hash</th>
+                  <th>Device Address</th>
+                  <th>Power Value</th>
+                </tr>
+              </thead>
+              <tbody id="transactionsPower">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <h2 class="sub-header">Payload Transactions</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Transaction Hash</th>
+                  <th>Payload</th>
+                </tr>
+              </thead>
+              <tbody id="transactionsPayload">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    </div>
+
+
+    <script>
+
+      // Load Web3
+      console.log("### LOAD WEB3")
+      if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+      } else {
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+      }
+      console.log(web3)
+
+      // Default account
+      console.log("### DEFAULT ACCOUNT")
+      web3.eth.defaultAccount = web3.eth.accounts[0];
+      console.log(web3.eth.defaultAccount)
+
+      // Get Truffle Contract artefact
+      console.log("### Get Truffle Contract artefact")
+      var Coursetro;
+      $.getJSON("http://localhost:8080/build/contracts/Weechain.json", function( data ) {
+        console.log(data)
+        
+        // Load Contract
+        var CoursetroContract = TruffleContract(data);
+        CoursetroContract.setProvider(web3.currentProvider);
+
+        // Get contract instance
+        CoursetroContract.deployed().then(function(instance) {
+          Coursetro = instance;
+          console.log(Coursetro)
+        });
+
+      });
+
+      $("#buttonGet").click(function() {
+          Coursetro.amountOfenergy($("#Address").val()).then(function(result) {
+            console.log(result);
+          }).catch(function(error) {
+            console.log(error)
+          });
+      });
+
+      $("#buttonSet").click(function() {
+          Coursetro.setEnergy($("#Address").val(), $("#Energy").val()).then(function(result) {
+            console.log(result)
+          }).catch(function(error) {
+            console.log(error)
+          });
+
+      });
+
+
+      $("#buttonSetPower").click(function() {
+          Coursetro.setPower($("#Address").val(), $("#Power").val()).then(function(result) {
+            console.log(result)
+          }).catch(function(error) {
+            console.log(error)
+          });
+      });
+
+      $("#buttonGetPower").click(function() {
+          Coursetro.amountOfpower($("#Address").val()).then(function(result) {
+            console.log(result)
+          }).catch(function(error) {
+            console.log(error)
+          });
+      });
+
+       
+      $("#buttonSetPayload").click(function() {
+        Coursetro.setPayload($("#SQN").val(), $("#Payload").val()).then(function(result) {
+            console.log(result)
+        }).catch(function(error) {
+            console.log(error)
+        });
+      });
+
+    </script>
+
+</body>
+</html>
