@@ -230,9 +230,9 @@ text-align: center;
 
       $("#buttonSet").click(function() {
           Coursetro.setEnergy($("#Address").val(), $("#Energy").val()).then(function(result) {
-            console.log(result)
-            console.log("Logs trigerred for this transaction:")
-            console.log(result.logs)
+            console.log(result);
+            console.log("Logs trigerred for this transaction:");
+            console.log(result.logs);
           }).catch(function(error) {
             console.log(error)
           });
