@@ -1,0 +1,14 @@
+{
+  "name": "48668-how-to-store-hash-of-an-excel-file-in-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-sha3": "^0.7.0"
+  }
+}
