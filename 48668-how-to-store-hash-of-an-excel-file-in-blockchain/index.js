@@ -9,5 +9,11 @@ console.log("sample2.xlsx: " + hash2);
 
 function hashFile(file) {
     var body = fs.readFileSync(file);
-    return keccak256(body.toString('base64'));
+    console.log("##############################");
+    console.log(body);
+    console.log("##############################");
+    console.log(body.toString('base64'));
+    console.log("##############################");
+    return keccak256(body.toString());
 }
+
