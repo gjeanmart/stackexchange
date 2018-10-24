@@ -3,7 +3,7 @@
 
   const IPFSStorage = artifacts.require('IPFSStorage.sol');
   const multihashes = require('multihashes');
-  const cid = "QmYZdDyJYAj2jAXzt8ZYD13ApbAKohgUgrTi8KHTKycVZC";
+  const cid = "QmWATWQ7fVPP2EFGu71UkfnqhYXDYH566qy47CnJDgvs8u";
 
   contract('IPFSStorage', function(accounts) {
   	let instance;
