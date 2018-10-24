@@ -1,0 +1,17 @@
+{
+  "name": "61100-how-much-does-it-cost-to-store-each-ipfs-hash-in-ethereum-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "multihashes": "^0.4.14"
+  }
+}
