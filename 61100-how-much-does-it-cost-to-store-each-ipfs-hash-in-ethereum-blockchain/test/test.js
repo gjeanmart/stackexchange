@@ -44,6 +44,7 @@
 	      digest: '0x' + mh.slice(2).toString('hex'),
 	      size: mh.length - 2
 	    }
+        console.log(args);
 
         instance.storeCIDAsStruct(args.digest, args.hashFunction, args.size, {'from': accounts[0]}).then(function(txReceipt) {
     		console.log('# should store the IPFS CID as a struct');

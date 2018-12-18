@@ -1,0 +1,14 @@
+{
+  "name": "63518-gas-issue-on-sendrawtransaction-on-the-rinkeby-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eth-lightwallet": "^3.0.1"
+  }
+}
